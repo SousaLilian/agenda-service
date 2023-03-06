@@ -1,0 +1,53 @@
+package ldev.com.agenda.api.request;
+
+import java.time.LocalDateTime;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+public class AgendaRequest {
+
+    @NotBlank
+    private String descricao;
+
+    @NotNull
+    @Future
+    @DateTimeFormat(pattern = "yyyy-MM-ddTHH:mm:ss")
+    private LocalDateTime horario;
+
+    @NotNull
+    private Long pacienteId;
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public LocalDateTime getHorario() {
+		return horario;
+	}
+
+	public void setHorario(LocalDateTime horario) {
+		this.horario = horario;
+	}
+
+	public Long getPacienteId() {
+		return pacienteId;
+	}
+
+	public void setPacienteId(Long pacienteId) {
+		this.pacienteId = pacienteId;
+	}
+    
+    
+}

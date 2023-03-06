@@ -1,0 +1,5 @@
+package ldev.com.agenda.api.mapper;
+
+public class AgendaMapper {
+
+}

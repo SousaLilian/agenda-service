@@ -1,0 +1,5 @@
+package ldev.com.agenda.api.response;
+
+public class PacienteResponse {
+
+}

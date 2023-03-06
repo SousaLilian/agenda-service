@@ -1,0 +1,5 @@
+package ldev.com.agenda.domain.service;
+
+public class PacienteService {
+
+}

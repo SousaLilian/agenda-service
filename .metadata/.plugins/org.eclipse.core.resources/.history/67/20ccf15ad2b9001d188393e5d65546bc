@@ -1,0 +1,15 @@
+package ldev.com.agenda.domain.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import ldev.com.agenda.domain.service.PacienteService;
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@RestController
+@RequestMapping("/paciente")
+public class PacienteController {
+
+	private final PacienteService service;
+}

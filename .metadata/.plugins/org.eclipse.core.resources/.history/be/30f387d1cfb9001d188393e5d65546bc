@@ -1,0 +1,29 @@
+package ldev.com.agenda.domain.service;
+
+
+@Service
+@Transactional
+public class PacienteService {
+
+	@Autowired
+	private final PacienteRepository repository;
+
+	public Paciente salvar(Paciente paciente) {
+
+		// TODO: para validar se o cpf já não existe
+
+		return repository.save(paciente);
+	}
+
+	public List<Paciente> listarTodos() {
+		return repository.findAll();
+	}
+
+	public Optional<Paciente> buscarPorId(Long id) {
+		return repository.findById(id);
+	}
+
+	public void deletar(Long id) {
+		repository.deleteById(id);
+	}
+}
